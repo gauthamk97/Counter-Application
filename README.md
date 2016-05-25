@@ -1,3 +1,9 @@
-#Test1
+#Delta Task 1
 
-I've successfully done everything from terminal
+Counter App
+
+Left to do :-
+
+Retain Background Color even after termination
+
+Use Appdelegate.swift appropriately
