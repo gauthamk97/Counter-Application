@@ -15,11 +15,23 @@ class ViewController: UIViewController {
 
     var countno = 0
     var myDefaults = NSUserDefaults.standardUserDefaults()
+    var myDefaultsBG = NSUserDefaults.standardUserDefaults()
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
-        self.countno=self.myDefaults.integerForKey("countno")
+    
+        self.countno=self.myDefaults.integerForKey("countno") //Assigns value of count no from previous run
+        
+        //Using if? prevents the app from crashing on first run
+        if let decoded = myDefaultsBG.objectForKey("color") as? NSData {
+            if let decodedColor = NSKeyedUnarchiver.unarchiveObjectWithData(decoded) as? UIColor {
+                    self.Background.backgroundColor = decodedColor //Assigning BGColor
+            }
+        }
+        
+        //Assigning Initial Count Value
         self.CounterLabel.text = "\(self.countno)"
         
     }
@@ -44,18 +56,30 @@ class ViewController: UIViewController {
         countno+=1
         self.CounterLabel.text = "\(self.countno)"
         
-        self.Background.backgroundColor = getRandomColor() //Changes BGColor
+        let randomcolor : UIColor = self.getRandomColor()
         
-        self.myDefaults.setInteger(countno, forKey: "countno")
+        self.Background.backgroundColor = randomcolor //Changes BGColor
+        
+        let encodedData : NSData = NSKeyedArchiver.archivedDataWithRootObject(randomcolor) //Encodes BGcolor in format that we can save it in
+        
+        self.myDefaultsBG.setObject(encodedData, forKey: "color") //Saves BGcolor
+        
+        self.myDefaults.setInteger(countno, forKey: "countno") //Saves Countno
     }
     
-//On Click the Reset Button
+//On Clicking the Reset Button
     @IBAction func OnResetClick(sender: AnyObject) {
+        
         self.countno=0
         CounterLabel.text = "\(countno)"
         self.Background.backgroundColor=UIColor.blackColor()
         
-        self.myDefaults.setInteger(self.countno, forKey: "countno")
+        let encodedData : NSData = NSKeyedArchiver.archivedDataWithRootObject(UIColor.blackColor()) //Encodes BGcolor(black) in format that we can save it in
+        
+        self.myDefaultsBG.setObject(encodedData, forKey: "color") //Saves BGcolor(black)
+
+        self.myDefaults.setInteger(self.countno, forKey: "countno") //Saves Countno
+        
     }
 
 
