@@ -4,6 +4,4 @@ Counter App
 
 Left to do :-
 
-Retain Background Color even after termination
-
-Use Appdelegate.swift appropriately
+Use Appdelegate.swift appropriately (Implement the save in applicationWillTerminate function)
