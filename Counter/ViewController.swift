@@ -56,15 +56,18 @@ class ViewController: UIViewController {
         countno+=1
         self.CounterLabel.text = "\(self.countno)"
         
+        //Gets Random Color and sets it as BGColor
         let randomcolor : UIColor = self.getRandomColor()
+        self.Background.backgroundColor = randomcolor 
         
-        self.Background.backgroundColor = randomcolor //Changes BGColor
+        //Encodes BGcolor into a format that we can save it in
+        let encodedData : NSData = NSKeyedArchiver.archivedDataWithRootObject(randomcolor) 
         
-        let encodedData : NSData = NSKeyedArchiver.archivedDataWithRootObject(randomcolor) //Encodes BGcolor in format that we can save it in
+        //Saves BGcolor
+        self.myDefaultsBG.setObject(encodedData, forKey: "color") 
         
-        self.myDefaultsBG.setObject(encodedData, forKey: "color") //Saves BGcolor
-        
-        self.myDefaults.setInteger(countno, forKey: "countno") //Saves Countno
+        //Saves Countno
+        self.myDefaults.setInteger(countno, forKey: "countno") 
     }
     
 //On Clicking the Reset Button
@@ -74,11 +77,14 @@ class ViewController: UIViewController {
         CounterLabel.text = "\(countno)"
         self.Background.backgroundColor=UIColor.blackColor()
         
-        let encodedData : NSData = NSKeyedArchiver.archivedDataWithRootObject(UIColor.blackColor()) //Encodes BGcolor(black) in format that we can save it in
+        //Encodes BGcolor(black) in format that we can save it in
+        let encodedData : NSData = NSKeyedArchiver.archivedDataWithRootObject(UIColor.blackColor()) 
         
-        self.myDefaultsBG.setObject(encodedData, forKey: "color") //Saves BGcolor(black)
+        //Saves BGcolor(black)
+        self.myDefaultsBG.setObject(encodedData, forKey: "color") 
 
-        self.myDefaults.setInteger(self.countno, forKey: "countno") //Saves Countno
+        //Saves Countno
+        self.myDefaults.setInteger(self.countno, forKey: "countno") 
         
     }
 
