@@ -3,7 +3,6 @@
     <dependencies>
         <deployment version="2048" identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
-        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
@@ -57,20 +56,19 @@
                                 <variation key="heightClass=compact" constant="180"/>
                             </constraint>
                             <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="xvp-i4-tf4" secondAttribute="bottom" id="Cg2-vz-Lf0"/>
-                            <constraint firstAttribute="bottom" secondItem="Hjw-NT-CRb" secondAttribute="bottom" constant="200" id="Dqy-aq-YiV">
-                                <variation key="heightClass=regular-widthClass=compact" constant="260"/>
-                            </constraint>
                             <constraint firstItem="xvp-i4-tf4" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="Esz-0F-5gM"/>
+                            <constraint firstItem="myN-GQ-bh6" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" constant="110" id="FKl-f7-OgI">
+                                <variation key="heightClass=regular-widthClass=compact" constant="165"/>
+                            </constraint>
                             <constraint firstItem="xvp-i4-tf4" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="JBF-dI-xXC"/>
                             <constraint firstAttribute="trailing" secondItem="xvp-i4-tf4" secondAttribute="trailing" id="LkM-a7-VZI"/>
-                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="myN-GQ-bh6" secondAttribute="bottom" constant="160" id="O9w-Fn-qfa"/>
                             <constraint firstAttribute="trailing" secondItem="Hjw-NT-CRb" secondAttribute="trailing" constant="150" id="OlM-2o-sL3">
                                 <variation key="heightClass=compact" constant="180"/>
                             </constraint>
-                            <constraint firstItem="6t1-qO-ohZ" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="Rrj-rf-nro"/>
-                            <constraint firstItem="6t1-qO-ohZ" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="topMargin" constant="75" id="Scx-XI-8D3">
-                                <variation key="heightClass=regular-widthClass=compact" constant="200"/>
+                            <constraint firstItem="Hjw-NT-CRb" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" constant="55" id="Q2p-h2-2dd">
+                                <variation key="heightClass=regular-widthClass=compact" constant="70"/>
                             </constraint>
+                            <constraint firstItem="6t1-qO-ohZ" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="Rrj-rf-nro"/>
                             <constraint firstItem="myN-GQ-bh6" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" constant="30" id="Zj7-yx-Nel">
                                 <variation key="heightClass=compact" constant="40"/>
                             </constraint>
@@ -82,41 +80,44 @@
                             <constraint firstItem="Hjw-NT-CRb" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="oYw-vk-Mm4">
                                 <variation key="heightClass=compact" constant="-40"/>
                             </constraint>
+                            <constraint firstItem="6t1-qO-ohZ" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" constant="-80" id="v1U-7h-SMa">
+                                <variation key="heightClass=regular-widthClass=compact" constant="-110"/>
+                            </constraint>
                         </constraints>
                         <variation key="default">
                             <mask key="constraints">
-                                <exclude reference="6AW-v1-PQA"/>
-                                <exclude reference="Zj7-yx-Nel"/>
-                                <exclude reference="jgW-ky-YJV"/>
                                 <exclude reference="Rrj-rf-nro"/>
-                                <exclude reference="Scx-XI-8D3"/>
                                 <exclude reference="bHd-pf-HHi"/>
                                 <exclude reference="cyC-CA-SIf"/>
+                                <exclude reference="v1U-7h-SMa"/>
                                 <exclude reference="3nC-Ea-Htu"/>
-                                <exclude reference="Dqy-aq-YiV"/>
                                 <exclude reference="OlM-2o-sL3"/>
+                                <exclude reference="Q2p-h2-2dd"/>
                                 <exclude reference="oYw-vk-Mm4"/>
-                                <exclude reference="O9w-Fn-qfa"/>
+                                <exclude reference="6AW-v1-PQA"/>
+                                <exclude reference="FKl-f7-OgI"/>
+                                <exclude reference="Zj7-yx-Nel"/>
+                                <exclude reference="jgW-ky-YJV"/>
                             </mask>
                         </variation>
                         <variation key="heightClass=compact">
                             <mask key="constraints">
-                                <include reference="6AW-v1-PQA"/>
-                                <include reference="Zj7-yx-Nel"/>
                                 <include reference="Rrj-rf-nro"/>
                                 <include reference="cyC-CA-SIf"/>
                                 <include reference="OlM-2o-sL3"/>
                                 <include reference="oYw-vk-Mm4"/>
+                                <include reference="6AW-v1-PQA"/>
+                                <include reference="Zj7-yx-Nel"/>
                             </mask>
                         </variation>
                         <variation key="heightClass=regular-widthClass=compact">
                             <mask key="constraints">
-                                <include reference="jgW-ky-YJV"/>
-                                <include reference="Scx-XI-8D3"/>
                                 <include reference="bHd-pf-HHi"/>
+                                <include reference="v1U-7h-SMa"/>
                                 <include reference="3nC-Ea-Htu"/>
-                                <include reference="Dqy-aq-YiV"/>
-                                <include reference="O9w-Fn-qfa"/>
+                                <include reference="Q2p-h2-2dd"/>
+                                <include reference="FKl-f7-OgI"/>
+                                <include reference="jgW-ky-YJV"/>
                             </mask>
                         </variation>
                     </view>
