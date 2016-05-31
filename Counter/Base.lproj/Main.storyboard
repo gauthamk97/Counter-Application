@@ -86,6 +86,10 @@
                         </constraints>
                         <variation key="default">
                             <mask key="constraints">
+                                <exclude reference="6AW-v1-PQA"/>
+                                <exclude reference="FKl-f7-OgI"/>
+                                <exclude reference="Zj7-yx-Nel"/>
+                                <exclude reference="jgW-ky-YJV"/>
                                 <exclude reference="Rrj-rf-nro"/>
                                 <exclude reference="bHd-pf-HHi"/>
                                 <exclude reference="cyC-CA-SIf"/>
@@ -94,30 +98,26 @@
                                 <exclude reference="OlM-2o-sL3"/>
                                 <exclude reference="Q2p-h2-2dd"/>
                                 <exclude reference="oYw-vk-Mm4"/>
-                                <exclude reference="6AW-v1-PQA"/>
-                                <exclude reference="FKl-f7-OgI"/>
-                                <exclude reference="Zj7-yx-Nel"/>
-                                <exclude reference="jgW-ky-YJV"/>
                             </mask>
                         </variation>
                         <variation key="heightClass=compact">
                             <mask key="constraints">
+                                <include reference="6AW-v1-PQA"/>
+                                <include reference="Zj7-yx-Nel"/>
                                 <include reference="Rrj-rf-nro"/>
                                 <include reference="cyC-CA-SIf"/>
                                 <include reference="OlM-2o-sL3"/>
                                 <include reference="oYw-vk-Mm4"/>
-                                <include reference="6AW-v1-PQA"/>
-                                <include reference="Zj7-yx-Nel"/>
                             </mask>
                         </variation>
                         <variation key="heightClass=regular-widthClass=compact">
                             <mask key="constraints">
+                                <include reference="FKl-f7-OgI"/>
+                                <include reference="jgW-ky-YJV"/>
                                 <include reference="bHd-pf-HHi"/>
                                 <include reference="v1U-7h-SMa"/>
                                 <include reference="3nC-Ea-Htu"/>
                                 <include reference="Q2p-h2-2dd"/>
-                                <include reference="FKl-f7-OgI"/>
-                                <include reference="jgW-ky-YJV"/>
                             </mask>
                         </variation>
                     </view>
